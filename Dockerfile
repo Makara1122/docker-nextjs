@@ -5,6 +5,8 @@ RUN npm install  --force
 COPY . . 
 RUN npm run build 
 
+
+
 # Production stage
 FROM node:lts
 WORKDIR /app

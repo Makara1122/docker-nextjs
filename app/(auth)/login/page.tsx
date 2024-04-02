@@ -24,7 +24,7 @@ export default function Login() {
     last_name : "",
   }
 
-  const handleSubmit = (value : initailValues) => {
+  const handleSubmit = (value : initailValue) => {
     setLoading(true)
     fetch(BaseUrl,{
       method: "POST",
