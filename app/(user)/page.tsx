@@ -12,7 +12,7 @@ export default function Home() {
     setLoading(true)
     fetch(URL)
     .then(res=>res.json())
-    .then(data=>setProduct(data.results))
+    .then(data=>setProduct(data))
    setLoading(false)
 
   },[])
@@ -24,14 +24,20 @@ export default function Home() {
       >Loading.......</div>
     )
   }
+  type ProductType = {
+    product : any;
+    key : number;
+  }
+
+  
 
 
   return (
     <main className="  grid  gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 ">
       {
-       products.map((product,key) => (
+       products.map(({product,key}:ProductType) => (
         <CardComponent key={key} 
-        title = {product.name}
+        title = {product.name }
         price = {product.price}
         image = {
           product.image
