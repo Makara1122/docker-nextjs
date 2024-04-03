@@ -13,6 +13,7 @@ export default function ProductDetail({params,searchParams}:ProductProp) {
     <div>
       <ProductDetail id={params.id}/>
       <p>Product details</p>
+      <h3>This is testing</h3>
     </div>
   )
 }
